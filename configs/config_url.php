@@ -14,5 +14,4 @@
     $url_js_content = 'assets/js/js_content.php';
     $url_crud = 'views/contents/crud.php';
     $ulr_function = 'configs/funciton.php';
-
 ?>

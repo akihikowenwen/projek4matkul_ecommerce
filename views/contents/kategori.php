@@ -2,6 +2,8 @@
   include_once($url_db);
   $digit = 5;
   $name_page = 'kategori';
+  $text_jdl =  ($_GET['action']=='edit') ? 'Edit data' : 'Input data';
+  $collapse_control = ($_GET['action']=='edit') ? 'show' : '' ;
   switch ($_GET['action']) {
     case 'ubah':
       if (isset($_POST['submit'])) {
@@ -97,12 +99,12 @@
 
             <div class="shadow p-3">
                 <div class="form-inline">
-                    <h3 class="text-center">Edit data</h3>
-                    <button class="btn btn-primary ml-auto" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <h3 class="text-center"><?php echo $text_jdl; ?></h3>
+                    <button class="btn btn-outline-info ml-auto" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                         Show
                     </button>
                 </div>
-                <div class="collapse" id="collapseExample">
+                <div class="collapse <?php echo $collapse_control ?>" id="collapseExample">
                     <br class="my-1">
                     <?php if ($_GET['action']=="edit"){
                         $id = $_GET['id'];

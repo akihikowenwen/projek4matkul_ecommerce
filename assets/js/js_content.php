@@ -26,13 +26,6 @@
                 }
             })
         </script>
-        <!-- untuk form tanggal -->
-        <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker1').datetimepicker();
-            });
-        </script>
-
         <script>
         var truncate = function (elem, limit, after) {
             if (!elem || !limit) return;
@@ -44,3 +37,4 @@
             var elem = document.querySelector('.truncate');
             truncate(elem, 7, '...');
         </script>
+        s

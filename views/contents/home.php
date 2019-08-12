@@ -20,7 +20,7 @@
                             if (mysqli_num_rows($query)>0) {
                                 while ($content = mysqli_fetch_array($query)) {
                         ?>
-                            <div class="item text-center mx-3">
+                            <div class="item text-center mx-3 shadow-sm">
                                 <img src="<?php echo $url_db_cover.$content['photo'] ?>" class="img-fluid-c" alt="Responsive image">
                             </div>
                         <?php 
@@ -44,10 +44,10 @@
                                     <div class="my-card mx-auto">
                                         <div class="box shadow-sm"></div>
                                         <div class="row h-100">
-                                            <div class="col-4 px-0">
+                                            <div class="col-md-4 px-0">
                                                 <div class="h-100 img" style="background:url('<?php echo $url_db_cover.$content['photo'] ?>');"></div>
                                             </div>
-                                            <div class="col-7 h-100 d-table">
+                                            <div class="col-md-7 h-100 d-table">
                                                 <div class="d-table-cell align-middle">
                                                     <div class="title f-roboto">
                                                         <!-- masih masalah di truncatenya  -->
